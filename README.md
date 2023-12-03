@@ -394,7 +394,7 @@ import { LiveJournalShare } from 'react-share-lite'
 import { WorkplaceShare } from 'react-share-lite'
 ;<WorkplaceShare
   url={'https://github.com/ayda-tech/react-share-lite'}
-  quote={'React Share Kit'}
+  quote={'React Share Lite'}
 />
 ```
 
