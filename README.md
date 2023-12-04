@@ -8,7 +8,7 @@ react-share-lite is a simple and easy-to-use library for adding social media sha
 
 [![NPM](https://img.shields.io/npm/v/react-share-lite.svg)](https://www.npmjs.com/package/react-share-lite) ![npm bundle size](https://img.shields.io/bundlephobia/min/react-share-lite) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-![Share buttons screenshot](https://github.com/ahmadjoya/react-share-lite/blob/main/react-share-lite.png)
+![Share buttons screenshot](https://github.com/ayda-tech/react-share-lite/blob/main/react-share-lite.png?raw=true)
 
 </center>
 
