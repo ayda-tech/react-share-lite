@@ -20,12 +20,3 @@ export { default as HatenaShare } from './components/buttons/HatenaShareButton'
 export { default as FacebookMessengerShare } from './components/buttons/FacebookMessengerShareButton'
 export { default as EmailShare } from './components/buttons/EmailShareButton'
 export { default as GabShare } from './components/buttons/GabShareButton'
-
-// Counts
-export { default as OKCount } from './components/counts/OKShareCount'
-export { default as PinterestCount } from './components/counts/PinterestShareCount'
-export { default as TumblrCount } from './components/counts/TumblrShareCount'
-export { default as VKCount } from './components/counts/VKShareCount'
-export { default as HatenaCount } from './components/counts/HatenaShareCount'
-export { default as FacebookCount } from './components/counts/FacebookShareCount'
-export { default as RedditCount } from './components/counts/RedditShareCount'
