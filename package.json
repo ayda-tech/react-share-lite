@@ -1,6 +1,6 @@
 {
   "name": "react-share-lite",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Social media share buttons for React and Nextjs.",
   "scripts": {
     "build": "rollup -c",
