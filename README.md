@@ -77,31 +77,13 @@ Each button supports a set of global props that are consistent across all button
 
 ```jsx
 import React from 'react'
-import { FacebookShare, FacebookCount } from 'react-share-lite'
+import { FacebookShare } from 'react-share-lite'
 
 const ShareButtons = () => {
   const shareUrl = 'https://github.com/ayda-tech/react-share-lite'
   const title = 'Check out this awesome website!'
 
-  return (
-    <>
-      <FacebookShare url={shareUrl} quote={title} />
-
-      <FacebookCount
-        url={shareUrl}
-        appId="your-app-id"
-        appSecret="your-app-secret"
-      />
-
-      <FacebookCount
-        url={shareUrl}
-        appId="your-app-id"
-        appSecret="your-app-secret"
-      >
-        {(shareCount) => <span className="wrapper">{shareCount}</span>}
-      </FacebookCount>
-    </>
-  )
+  return <FacebookShare url={shareUrl} quote={title} />
 }
 ```
 
@@ -147,9 +129,9 @@ import {
 
 | Props    | Type   | Default | Description | Required |
 | :------- | :----- | :------ | :---------- | :------- |
-| via      | string |         |             | FALSE    |
-| hashtags | array  |         |             | FALSE    |
-| related  | array  |         |             | FALSE    |
+| via      | string |         | A screen name to associate with the Tweet. | FALSE    |
+| hashtags | array  |         | A comma-separated list of hashtags to be appended to default Tweet text. | FALSE    |
+| related  | array  |         | A comma-separated list of accounts related to the content of the shared URI. | FALSE    |
 
 ### Linkedin Share
 
@@ -228,9 +210,9 @@ import { EmailShare } from 'next-share'
 | :---------- | :------ | :------ | :----------------------------------------------- | :------- |
 | children    | node    |         | React component, HTML element or string.         | TRUE     |
 | url         | string  |         | The URL of the shared page.                      | TRUE     |
-| subject     | string  |         |                                                  | FALSE    |
-| body        | string  |         |                                                  | FALSE    |
-| separator   | string  |         |                                                  | FALSE    |
+| subject     | string  |         | The subject of the email.                        | FALSE    |
+| body        | string  |         | The body of the email.                           | FALSE    |
+| separator   | string  |         | A separator to be shared.                        | FALSE    |
 | blankTarget | boolean | false   | Open share window in a new tab if set to `true`. | FALSE    |
 
 ### VK Share
@@ -306,9 +288,9 @@ import { TumblrShare } from 'react-share-lite'
 
 | Props    | Type                             | Default           | Description                         | Required |
 | :------- | :------------------------------- | :---------------- | :---------------------------------- | :------- |
-| tags     | <code>Array&lt;string&gt;</code> |                   |                                     | FALSE    |
+| tags     | <code>Array&lt;string&gt;</code> |                   | An array of tags to be shared.      | FALSE    |
 | caption  | string                           |                   | The description of the shared page. | FALSE    |
-| posttype | string                           | <code>link</code> |                                     | FALSE    |
+| posttype | string                           | <code>link</code> | The type of the post.               | FALSE    |
 
 ### Viber Share
 
@@ -394,8 +376,8 @@ import { WorkplaceShare } from 'react-share-lite'
 
 | Props   | Type   | Default | Description | Required |
 | :------ | :----- | :------ | :---------- | :------- |
-| quote   | string |         |             | FALSE    |
-| hashtag | string |         |             | FALSE    |
+| quote   | string |         | A quote to be shared. | FALSE    |
+| hashtag | string |         | Hashtags to be shared.   | FALSE    |
 
 ### Pocket Share
 
