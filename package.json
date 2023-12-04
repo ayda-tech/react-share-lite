@@ -1,7 +1,7 @@
 {
   "name": "react-share-lite",
   "version": "1.0.4",
-  "description": "Social media share buttons and share counts for React and Nextjs.",
+  "description": "Social media share buttons for React and Nextjs.",
   "scripts": {
     "build": "rollup -c",
     "prettier": "prettier --write './src/*.ts' './src/**/*.ts' './src/**/*.tsx' --config ./.prettierrc",
