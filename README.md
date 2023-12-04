@@ -8,7 +8,7 @@ react-share-lite is a simple and easy-to-use library for adding social media sha
 
 [![NPM](https://img.shields.io/npm/v/react-share-lite.svg)](https://www.npmjs.com/package/react-share-lite) ![npm bundle size](https://img.shields.io/bundlephobia/min/react-share-lite) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-![Share buttons screenshot](https://github.com/ahmadjoya/js-generate-password/blob/main/react-share-kit-demo.png)
+![Share buttons screenshot](https://github.com/ahmadjoya/react-share-lite/blob/main/react-share-lite.png)
 
 </center>
 
@@ -40,14 +40,6 @@ react-share-lite is a simple and easy-to-use library for adding social media sha
   - [Instapaper Share](#instapaper-share)
   - [Hatena Share](#hatena-share)
   - [Gab Share](#gab-share)
-- [📕 Share Count global props](#-share-count-global-props)
-- [💡 Usage of ShareCount](#-usage-of-sharecount)
-  - [Facebook Count](#facebook-count)
-  - [Hatena Count](#hatena-count)
-  - [OK Count](#ok-count)
-  - [Pinterest Count](#pinterest-count)
-  - [Tumblr Count](#tumblr-count)
-  - [VK Count](#vk-count)
 - [License](#license)
 
 ## Installation
@@ -451,116 +443,6 @@ import {
 ```js
 import { GabShare } from 'react-share-lite'
 ;<GabShare url={'https://github.com/ayda-tech/react-share-lite'} />
-```
-
-## 📕 Share Count global props
-
-| Props     | Type   | Default | Description                              | Required |
-| :-------- | :----- | :------ | :--------------------------------------- | :------- |
-| url       | string |         | The URL of the shared page.              | TRUE     |
-| children  | node   |         | React component, HTML element or string. | FALSE    |
-| appId     | string |         | Facebook application id.                 | TRUE     |
-| appSecret | string |         | Facebook application secret.             | TRUE     |
-
-## 💡 Usage of ShareCount
-
-### Facebook Count
-
-👨‍💻 <b>Example</b>
-
-```js
-import { FacebookCount } from 'react-share-lite'
-
-<FacebookCount
-  url='https://github.com/ayda-tech/react-share-lite'
-  appId=''
-  appSecret=''
-/>
-
-<FacebookCount
-  url='https://github.com/ayda-tech/react-share-lite'
-  appId=''
-  appSecret=''
->
-  {shareCount => <span className="wrapper">{shareCount}</span>}
-</FacebookCount>
-```
-
-📕 <b>Props</b>: Supports only on Facebook count
-
-| Props     | Type   | Default | Description                  | Required |
-| :-------- | :----- | :------ | :--------------------------- | :------- |
-| appId     | string |         | Facebook application id.     | TRUE     |
-| appSecret | string |         | Facebook application secret. | TRUE     |
-
-### Hatena Count
-
-👨‍💻 <b>Example</b>
-
-```js
-import { HatenaCount } from 'react-share-lite'
-
-<HatenaCount url={'https://github.com/ayda-tech/react-share-lite'} />
-
-<HatenaCount url={'https://github.com/ayda-tech/react-share-lite'}>
-  {shareCount => <span className="wrapper">{shareCount}</span>}
-</HatenaCount>
-```
-
-### OK Count
-
-👨‍💻 <b>Example</b>
-
-```js
-import { OKCount } from 'react-share-lite'
-
-<OKCount url={'https://github.com/ayda-tech/react-share-lite'} />
-
-<OKCount url={'https://github.com/ayda-tech/react-share-lite'}>
-  {shareCount => <span className="wrapper">{shareCount}</span>}
-</OKCount>
-```
-
-### Pinterest Count
-
-👨‍💻 <b>Example</b>
-
-```js
-import { PinterestShareCount } from 'react-share-lite'
-
-<PinterestCount url={'https://github.com/ayda-tech/react-share-lite'} />
-
-<PinterestCount url={'https://github.com/ayda-tech/react-share-lite'}>
-  {shareCount => <span className="wrapper">{shareCount}</span>}
-</PinterestCount>
-```
-
-### Tumblr Count
-
-👨‍💻 <b>Example</b>
-
-```js
-import { TumblrCount } from 'react-share-lite'
-
-<TumblrCount url={'https://github.com/ayda-tech/react-share-lite'} />
-
-<TumblrCount url={'https://github.com/ayda-tech/react-share-lite'}>
-  {shareCount => <span className="wrapper">{shareCount}</span>}
-</TumblrCount>
-```
-
-### VK Count
-
-👨‍💻 <b>Example</b>
-
-```js
-import { VKCount } from 'react-share-lite'
-
-<VKSCount url={'https://github.com/ayda-tech/react-share-lite'} />
-
-<VKCount url={'https://github.com/ayda-tech/react-share-lite'}>
-  {shareCount => <span className="wrapper">{shareCount}</span>}
-</VKCount>
 ```
 
 ## License
