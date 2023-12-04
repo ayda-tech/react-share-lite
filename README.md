@@ -96,7 +96,6 @@ const ShareButtons = () => {
 
 ```js
 import { FacebookShare } from 'react-share-lite';
-
 <FacebookShare
   url={'https://github.com/ayda-tech/react-share-lite'}
   quote={'react-share-lite - social share buttons for next & react apps.'}
@@ -171,7 +170,8 @@ import { WhatsappShare } from 'react-share-lite'
 
 ```js
 import { TelegramShare } from 'react-share-lite'
-;<TelegramShare url={'https://github.com/ayda-tech/react-share-lite'} />
+
+<TelegramShare url={'https://github.com/ayda-tech/react-share-lite'} />
 ```
 
 ### FacebookMessenger Share
@@ -348,7 +348,8 @@ import { WeiboShare } from 'react-share-lite'
 
 ```js
 import { MailruShare } from 'react-share-lite'
-;<MailruShare url={'https://github.com/ayda-tech/react-share-lite'} />
+
+<MailruShare url={'https://github.com/ayda-tech/react-share-lite'} />
 ```
 
 📕 <b>Props</b>: Supports only on Mail-Ru
