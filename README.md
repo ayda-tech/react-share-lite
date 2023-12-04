@@ -1,23 +1,22 @@
-<center>
+## React-Share-Lite
 
-### react-share-lite
+react-share-lite is a simple and easy-to-use library for adding social media share buttons to your React, Next and Preact applications. With react-share-lite, you can quickly integrate share buttons for popular social media platforms such as Facebook, Twitter, LinkedIn, and more.
 
-react-share-lite is a simple and easy-to-use library for adding social media share buttons to your React & Next applications. With react-share-lite, you can quickly integrate share buttons for popular social media platforms such as Facebook, Twitter, LinkedIn, and more.
+If you want to add share count functionality to your share buttons in your React, Next.js, or Preact projects built with JavaScript and TypeScript, [react-share-kit](https://www.npmjs.com/package/react-share-kit) is the solution. It seamlessly enhances your applications, allowing users to easily track the popularity of your content.
 
 [![downloads](https://img.shields.io/npm/dm/react-share-lite.svg?label=monthly%20downloads)](https://www.npmjs.com/package/react-share-lite) [![downloads](https://img.shields.io/npm/dt/react-share-lite.svg?label=total%20downloads)](https://www.npmjs.com/package/react-share-lite)
 
-[![NPM](https://img.shields.io/npm/v/react-share-lite.svg)](https://www.npmjs.com/package/react-share-lite) ![npm bundle size](https://img.shields.io/bundlephobia/min/react-share-lite) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-
+[![NPM](https://img.shields.io/npm/v/react-share-lite.svg)](https://www.npmjs.com/package/react-share-lite) ![npm bundle size](https://img.shields.io/bundlephobia/min/next-share) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ![Share buttons screenshot](https://github.com/ayda-tech/react-share-lite/blob/main/react-share-lite.png?raw=true)
 
-
-</center>
 
 ---
 
 ### Table of Contents
 
+- [React-Share-Lite](#react-share-lite)
+  - [Table of Contents](#table-of-contents)
 - [Installation](#installation)
 - [📕 Share Button Global Props](#-share-button-global-props)
 - [💡 Usage of ShareButtons](#-usage-of-sharebuttons)
@@ -442,7 +441,8 @@ import {
 
 ```js
 import { GabShare } from 'react-share-lite'
-;<GabShare url={'https://github.com/ayda-tech/react-share-lite'} />
+
+<GabShare url={'https://github.com/ayda-tech/react-share-lite'} />
 ```
 
 ## License

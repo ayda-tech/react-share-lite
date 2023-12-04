@@ -1,7 +1,7 @@
 {
   "name": "react-share-lite",
-  "version": "1.0.5",
-  "description": "Social media share buttons for React and Nextjs.",
+  "version": "1.1.0",
+  "description": "Social media share buttons for React, Nextjs and PReact applications.",
   "scripts": {
     "build": "rollup -c",
     "prettier": "prettier --write './src/*.ts' './src/**/*.ts' './src/**/*.tsx' --config ./.prettierrc",
@@ -35,7 +35,6 @@
     "@babel/preset-env": "^7.23.3",
     "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-commonjs": "^25.0.7",
-    "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^11.1.5",
     "@types/react": "^18.2.37",
