@@ -1,21 +1,22 @@
-<center>
+## React-Share-Lite
 
-### react-share-lite
+react-share-lite is a simple and easy-to-use library for adding social media share buttons to your React, Next and Preact applications. With react-share-lite, you can quickly integrate share buttons for popular social media platforms such as Facebook, Twitter, LinkedIn, and more.
 
-react-share-lite is a simple and easy-to-use library for adding social media share buttons to your React & Next applications. With react-share-lite, you can quickly integrate share buttons for popular social media platforms such as Facebook, Twitter, LinkedIn, and more.
+If you want to add share count functionality to your share buttons in your React, Next.js, or Preact projects built with JavaScript and TypeScript, [react-share-kit](https://www.npmjs.com/package/react-share-kit) is the solution. It seamlessly enhances your applications, allowing users to easily track the popularity of your content.
 
 [![downloads](https://img.shields.io/npm/dm/react-share-lite.svg?label=monthly%20downloads)](https://www.npmjs.com/package/react-share-lite) [![downloads](https://img.shields.io/npm/dt/react-share-lite.svg?label=total%20downloads)](https://www.npmjs.com/package/react-share-lite)
 
-[![NPM](https://img.shields.io/npm/v/react-share-lite.svg)](https://www.npmjs.com/package/react-share-lite) ![npm bundle size](https://img.shields.io/bundlephobia/min/react-share-lite) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/react-share-lite.svg)](https://www.npmjs.com/package/react-share-lite) ![npm bundle size](https://img.shields.io/bundlephobia/min/next-share) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ![Share buttons screenshot](https://github.com/ayda-tech/react-share-lite/blob/main/react-share-lite.png?raw=true)
 
-</center>
 
 ---
 
 ### Table of Contents
 
+- [React-Share-Lite](#react-share-lite)
+  - [Table of Contents](#table-of-contents)
 - [Installation](#installation)
 - [📕 Share Button Global Props](#-share-button-global-props)
 - [💡 Usage of ShareButtons](#-usage-of-sharebuttons)
@@ -94,8 +95,9 @@ const ShareButtons = () => {
 👨‍💻 <b>Example</b>
 
 ```js
-import { FacebookShare } from 'react-share-lite'
-;<FacebookShare
+import { FacebookShare } from 'react-share-lite';
+
+<FacebookShare
   url={'https://github.com/ayda-tech/react-share-lite'}
   quote={'react-share-lite - social share buttons for next & react apps.'}
   hashtag={'#react-share-lite'}
@@ -139,7 +141,8 @@ import {
 
 ```js
 import { LinkedinShare } from 'react-share-lite'
-;<LinkedinShare url={'https://github.com/ayda-tech/react-share-lite'} />
+
+<LinkedinShare url={'https://github.com/ayda-tech/react-share-lite'} />
 ```
 
 ### Whatsapp Share
@@ -148,7 +151,8 @@ import { LinkedinShare } from 'react-share-lite'
 
 ```js
 import { WhatsappShare } from 'react-share-lite'
-;<WhatsappShare
+
+<WhatsappShare
   url={'https://github.com/ayda-tech/react-share-lite'}
   title={'react-share-lite - social share buttons for next & react apps.'}
   separator=":: "
@@ -176,7 +180,8 @@ import { TelegramShare } from 'react-share-lite'
 
 ```js
 import { FacebookMessengerShareButton } from 'react-share-lite'
-;<FacebookMessengerShareButton
+
+<FacebookMessengerShareButton
   url="https://github.com/ayda-tech/react-share-lite"
   redirectUri="https://github.com/ayda-tech/react-share-lite"
   appId={'dmm4kj9djk203k4liuf994p'}
@@ -197,7 +202,8 @@ import { FacebookMessengerShareButton } from 'react-share-lite'
 
 ```js
 import { EmailShare } from 'next-share'
-;<EmailShare
+
+<EmailShare
   url={'https://github.com/next-share'}
   subject={'Next Share'}
   body="body"
@@ -221,7 +227,8 @@ import { EmailShare } from 'next-share'
 
 ```js
 import { VKShare } from 'react-share-lite'
-;<VKShare
+
+<VKShare
   url={'https://github.com/ayda-tech/react-share-lite'}
   image={'./react-share.png'}
 />
@@ -241,7 +248,8 @@ import { VKShare } from 'react-share-lite'
 
 ```js
 import { PinterestShare } from 'react-share-lite'
-;<PinterestShare
+
+<PinterestShare
   url={'https://github.com/ayda-tech/react-share-lite'}
   media={'react-share-lite - social share buttons for next & react apps.'}
 />
@@ -260,7 +268,8 @@ import { PinterestShare } from 'react-share-lite'
 
 ```js
 import { RedditShare } from 'react-share-lite'
-;<RedditShare url={'https://github.com/ayda-tech/react-share-lite'} />
+
+<RedditShare url={'https://github.com/ayda-tech/react-share-lite'} />
 ```
 
 ### Line Share
@@ -269,7 +278,8 @@ import { RedditShare } from 'react-share-lite'
 
 ```js
 import { LineShare } from 'react-share-lite'
-;<LineShare url={'https://github.com/ayda-tech/react-share-lite'} />
+
+<LineShare url={'https://github.com/ayda-tech/react-share-lite'} />
 ```
 
 ### Tumblr Share
@@ -278,7 +288,8 @@ import { LineShare } from 'react-share-lite'
 
 ```js
 import { TumblrShare } from 'react-share-lite'
-;<TumblrShare
+
+<TumblrShare
   url={'https://github.com/ayda-tech/react-share-lite'}
   caption="react-share-lite - social share buttons for next & react apps."
 />
@@ -298,7 +309,8 @@ import { TumblrShare } from 'react-share-lite'
 
 ```js
 import { ViberShare } from 'react-share-lite'
-;<ViberShare
+
+<ViberShare
   url={'https://github.com/ayda-tech/react-share-lite'}
   title={'react-share-lite - social share buttons for next & react apps.'}
 />
@@ -316,7 +328,8 @@ import { ViberShare } from 'react-share-lite'
 
 ```js
 import { WeiboShare } from 'react-share-lite'
-;<WeiboShare
+
+<WeiboShare
   url={'https://github.com/ayda-tech/react-share-lite'}
   title={'react-share-lite - social share buttons for next & react apps.'}
   image={`${String(window.location)}/${example - image}`}
@@ -351,7 +364,8 @@ import { MailruShare } from 'react-share-lite'
 
 ```js
 import { LiveJournalShare } from 'react-share-lite'
-;<LiveJournalShare url={'https://github.com/ayda-tech/react-share-lite'} />
+
+<LiveJournalShare url={'https://github.com/ayda-tech/react-share-lite'} />
 ```
 
 📕 <b>Props</b>: Supports only on Live Journal
@@ -366,7 +380,8 @@ import { LiveJournalShare } from 'react-share-lite'
 
 ```js
 import { WorkplaceShare } from 'react-share-lite'
-;<WorkplaceShare
+
+<WorkplaceShare
   url={'https://github.com/ayda-tech/react-share-lite'}
   quote={'React Share Lite'}
 />
@@ -397,7 +412,8 @@ import {
 
 ```js
 import { InstapaperShare } from 'react-share-lite'
-;<InstapaperShare url={'https://github.com/ayda-tech/react-share-lite'} />
+
+<InstapaperShare url={'https://github.com/ayda-tech/react-share-lite'} />
 ```
 
 📕 <b>Props</b>: Supports only on Instapaper
@@ -424,7 +440,8 @@ import {
 
 ```js
 import { GabShare } from 'react-share-lite'
-;<GabShare url={'https://github.com/ayda-tech/react-share-lite'} />
+
+<GabShare url={'https://github.com/ayda-tech/react-share-lite'} />
 ```
 
 ## License
