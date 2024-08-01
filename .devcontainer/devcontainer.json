@@ -1,0 +1,55 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.166.1/containers/typescript-node
+{
+  "name": "Sharing | J3D.AI",
+  "dockerComposeFile": [
+    "../docker-compose.yml"
+  ],
+  "service": "vscode",
+  "runServices": [
+    "vscode"
+  ],
+  "remoteEnv": {
+    "LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}",
+    "IMAGE_TOOL_COMMAND": "docker",
+    "EDITOR": "code -w",
+    "KUBECONFIG": "${containerWorkspaceFolder}/.kubeconfig",
+    "HELMFILE_ENVIRONMENT": "local"
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "zsh"
+      },
+      "extensions": [
+        "ms-azuretools.vscode-docker",
+        "arcanis.vscode-zipfs",
+        "wmaurer.change-case",
+        "styled-components.vscode-styled-components",
+        "mitchdenny.ecdc",
+        "olback.es6-css-minify",
+        "karyfoundation.nearley",
+        "42Crunch.vscode-openapi",
+        "ms-kubernetes-tools.vscode-kubernetes-tools",
+        "EditorConfig.EditorConfig",
+        "eamodio.gitlens",
+        "dbaeumer.vscode-eslint",
+        "Prisma.prisma",
+        "william-voyek.vscode-nginx",
+        "raynigon.nginx-formatter",
+        "mrmlnc.vscode-scss",
+        "clinyong.vscode-css-modules",
+        "steoates.autoimport",
+        "bradlc.vscode-tailwindcss"
+      ]
+    }
+  },
+  // Add the IDs of extensions you want installed when the container is created.
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  // "forwardPorts": [],
+  // Use 'postCreateCommand' to run commands after the container is created.
+  // "postCreateCommand": "yarn install",
+  // Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+  // "remoteUser": "node",
+  "workspaceFolder": "/workspace"
+}
