@@ -1,27 +1,44 @@
 ## React-Share-Lite
 
-react-share-lite is a simple and easy-to-use library for adding social media share buttons to your React, Next and Preact applications. With react-share-lite, you can quickly integrate share buttons for popular social media platforms such as Facebook, Twitter, LinkedIn, and more.
+react-share-lite is a simple and easy-to-use library for adding social media share buttons to your React, Next and Preact applications. With react-share-lite, you can quickly integrate share buttons for popular social media platforms such as Facebook, X (formerly Twitter), LinkedIn, and more.
 
-If you want to add share count functionality to your share buttons in your React, Next.js, or Preact projects built with JavaScript and TypeScript, [react-share-kit](https://www.npmjs.com/package/react-share-kit) is the solution. It seamlessly enhances your applications, allowing users to easily track the popularity of your content.
+react-share-lite ships share buttons only — it does not include share-count components. If you want share count functionality in your React, Next.js, or Preact projects built with JavaScript and TypeScript, [react-share-kit](https://www.npmjs.com/package/react-share-kit) is the solution. It seamlessly enhances your applications, allowing users to easily track the popularity of your content.
 
 [![downloads](https://img.shields.io/npm/dm/react-share-lite.svg?label=monthly%20downloads)](https://www.npmjs.com/package/react-share-lite) [![downloads](https://img.shields.io/npm/dt/react-share-lite.svg?label=total%20downloads)](https://www.npmjs.com/package/react-share-lite)
 
-[![NPM](https://img.shields.io/npm/v/react-share-lite.svg)](https://www.npmjs.com/package/react-share-lite) ![npm bundle size](https://img.shields.io/bundlephobia/min/next-share) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/react-share-lite.svg)](https://www.npmjs.com/package/react-share-lite) ![npm bundle size](https://img.shields.io/bundlephobia/min/react-share-lite) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ![Share buttons screenshot](https://github.com/ayda-tech/react-share-lite/blob/main/react-share-lite.png?raw=true)
 
 
 ---
 
+### ✨ What's new in v2.0.0
+
+- ⚛️ React 19 ready — works with React 17, 18 and 19, including Next.js App Router server components.
+- 🆕 New networks: `XShare` (the canonical X/Twitter button), `BlueskyShare` and `ThreadsShare`.
+- 🎨 Styleable at last — `className`, `style` and all other standard button attributes are forwarded to the underlying `<button>`.
+- 🧹 Dead networks removed: `PocketShare` (Pocket was shut down in July 2025) and `WorkplaceShare` (Meta Workplace was discontinued).
+
+See the [CHANGELOG](./CHANGELOG.md) for the full list, including breaking changes.
+
+**Requirements:** React 17, 18 or 19.
+
+---
+
 ### Table of Contents
 
 - [React-Share-Lite](#react-share-lite)
+  - [✨ What's new in v2.0.0](#-whats-new-in-v200)
   - [Table of Contents](#table-of-contents)
 - [Installation](#installation)
 - [📕 Share Button Global Props](#-share-button-global-props)
 - [💡 Usage of ShareButtons](#-usage-of-sharebuttons)
   - [Facebook Share](#facebook-share)
-  - [Twitter Share](#twitter-share)
+  - [X Share](#x-share)
+  - [Twitter Share (Deprecated)](#twitter-share-deprecated)
+  - [Bluesky Share](#bluesky-share)
+  - [Threads Share](#threads-share)
   - [Linkedin Share](#linkedin-share)
   - [Whatsapp Share](#whatsapp-share)
   - [Telegram Share](#telegram-share)
@@ -36,11 +53,10 @@ If you want to add share count functionality to your share buttons in your React
   - [Weibo Share](#weibo-share)
   - [Mailru Share](#mailru-share)
   - [LiveJournal Share](#livejournal-share)
-  - [Workplace Share](#workplace-share)
-  - [Pocket Share](#pocket-share)
   - [Instapaper Share](#instapaper-share)
   - [Hatena Share](#hatena-share)
   - [Gab Share](#gab-share)
+- [FAQ](#faq)
 - [License](#license)
 
 ## Installation
@@ -61,18 +77,36 @@ yarn add react-share-lite
 
 Each button supports a set of global props that are consistent across all buttons. However, in addition to these global props, each button also possesses its own unique set of specific properties. These specific properties are tailored to the individual functionality and customization options of each button.
 
-| Props        | Type    | Default       | Description                                                                                       | Required |
-| :----------- | :------ | :------------ | :------------------------------------------------------------------------------------------------ | :------- |
-| url          | string  |               | The URL of the shared page.                                                                       | TRUE     |
-| title        | string  |               | The title of the shared page.                                                                     | FALSE    |
-| windowWidth  | number  | 550           | Opened window width.                                                                              | FALSE    |
-| windowHeight | number  | 400           | Opened window height.                                                                             | FALSE    |
-| blankTarget  | boolean | false         | Open share window in a new tab if set to `true`.                                                  | FALSE    |
-| bgColor      | string  | related color | Icon background color.                                                                            | FALSE    |
-| round        | boolean | false         | The "round" attribute creates a fully circular button shape, giving it a 100% rounded appearance. | FALSE    |
-| borderRadius | number  | 0px           | Custom round share.                                                                               | FALSE    |
-| size         | number  | 64px          | The button size.                                                                                  | FALSE    |
-| buttonTitle  | string  |               | The title of button used instead of icon.                                                         | FALSE    |
+| Props                  | Type          | Default          | Description                                                                                       | Required |
+| :--------------------- | :------------ | :--------------- | :------------------------------------------------------------------------------------------------ | :------- |
+| url                    | string        |                  | The URL of the shared page.                                                                       | TRUE     |
+| title                  | string        |                  | The title of the shared page.                                                                     | FALSE    |
+| windowWidth            | number        | 550              | Opened window width.                                                                              | FALSE    |
+| windowHeight           | number        | 400              | Opened window height.                                                                             | FALSE    |
+| windowPosition         | string        | windowCenter     | Position of the share window: `windowCenter` or `screenCenter`.                                   | FALSE    |
+| blankTarget            | boolean       | false            | Open share window in a new tab if set to `true` (opened with `noopener,noreferrer`).              | FALSE    |
+| bgColor                | string        | related color    | Icon background color.                                                                            | FALSE    |
+| round                  | boolean       | false            | The "round" attribute creates a fully circular button shape, giving it a 100% rounded appearance. | FALSE    |
+| borderRadius           | number        | 0px              | Custom round share.                                                                               | FALSE    |
+| size                   | number        | 64px             | The button size.                                                                                  | FALSE    |
+| buttonTitle            | string        |                  | The title of button used instead of icon.                                                         | FALSE    |
+| style                  | CSSProperties |                  | Custom style for the underlying `button` element.                                                 | FALSE    |
+| iconStyle              | CSSProperties |                  | Custom style for the icon.                                                                        | FALSE    |
+| iconFillColor          | string        |                  | Icon fill color.                                                                                  | FALSE    |
+| disabled               | boolean       | false            | Disables the click action and applies `disabledStyle`.                                            | FALSE    |
+| disabledStyle          | CSSProperties | { opacity: 0.6 } | Style applied to the button when `disabled` is `true`.                                            | FALSE    |
+| openShareDialogOnClick | boolean       | true             | Open the share dialog on click.                                                                   | FALSE    |
+| onClick                | function      |                  | Custom click handler, called with `(event, shareLink)`.                                           | FALSE    |
+| beforeOnClick          | function      |                  | Takes a function that returns a Promise to be fulfilled before opening the share dialog.          | FALSE    |
+| onShareWindowClose     | function      |                  | Takes a function to be called after closing the share dialog.                                     | FALSE    |
+| resetButtonStyle       | boolean       | true             | Set to `false` to keep the browser's default `button` styling.                                    | FALSE    |
+| forwardedRef           | Ref           |                  | Ref forwarded to the underlying `button` element.                                                 | FALSE    |
+
+💅 <b>Styling</b>: All standard button HTML attributes — `className`, `style`, `aria-*`, `data-*`, event handlers, etc. — are forwarded to the underlying `<button>` element, so you can style the buttons with your own CSS classes:
+
+```jsx
+<FacebookShare url={shareUrl} className="my-share-button" data-testid="fb-share" />
+```
 
 👨‍💻 <b>Example</b>
 
@@ -110,29 +144,78 @@ import { FacebookShare } from 'react-share-lite';
 | quote   | string |         | A quote to be shared. | FALSE    |
 | hashtag | string |         | Hashtag to be shared. | FALSE    |
 
-### Twitter Share
+### X Share
 
 👨‍💻 <b>Example</b>
 
 ```js
-import {
-  TwitterShare
-} from 'react-share-lite'
+import { XShare } from 'react-share-lite'
+
+<XShare
+  url={'https://github.com/ayda-tech/react-share-lite'}
+  title={'react-share-lite - social share buttons for next & react apps.'}
+  hashtags={['react-share-lite', 'front-end']}
+/>
+```
+
+📕 <b>Props</b>: Supports only on X
+
+| Props    | Type   | Default | Description | Required |
+| :------- | :----- | :------ | :---------- | :------- |
+| via      | string |         | A username to attribute the post to. | FALSE    |
+| hashtags | array  |         | An array of hashtags to be appended to the default post text. | FALSE    |
+| related  | array  |         | An array of accounts related to the content of the shared URI. | FALSE    |
+
+### Twitter Share (Deprecated)
+
+> ⚠️ **Deprecated**: Twitter is now X. `TwitterShare` is kept as an alias of [`XShare`](#x-share) — it renders the X logo and opens the X post intent (`x.com/intent/post`). Use `XShare` in new code.
+
+👨‍💻 <b>Example</b>
+
+```js
+import { TwitterShare } from 'react-share-lite'
 
 <TwitterShare
   url={'https://github.com/ayda-tech/react-share-lite'}
   title={'react-share-lite - social share buttons for next & react apps.'}
-  hashtags=["#react-share-lite", "#front-end"]
+  hashtags={['react-share-lite', 'front-end']}
 />
 ```
 
-📕 <b>Props</b>: Supports only on Twitter
+📕 <b>Props</b>: Same as [X Share](#x-share).
 
-| Props    | Type   | Default | Description | Required |
-| :------- | :----- | :------ | :---------- | :------- |
-| via      | string |         | A screen name to associate with the Tweet. | FALSE    |
-| hashtags | array  |         | A comma-separated list of hashtags to be appended to default Tweet text. | FALSE    |
-| related  | array  |         | A comma-separated list of accounts related to the content of the shared URI. | FALSE    |
+### Bluesky Share
+
+👨‍💻 <b>Example</b>
+
+```js
+import { BlueskyShare } from 'react-share-lite'
+
+<BlueskyShare
+  url={'https://github.com/ayda-tech/react-share-lite'}
+  title={'react-share-lite - social share buttons for next & react apps.'}
+  separator=":: "
+/>
+```
+
+📕 <b>Props</b>: Supports only on Bluesky
+
+| Props     | Type   | Default | Description                                | Required |
+| :-------- | :----- | :------ | :----------------------------------------- | :------- |
+| separator | string |         | A separator between the title and the URL. | FALSE    |
+
+### Threads Share
+
+👨‍💻 <b>Example</b>
+
+```js
+import { ThreadsShare } from 'react-share-lite'
+
+<ThreadsShare
+  url={'https://github.com/ayda-tech/react-share-lite'}
+  title={'react-share-lite - social share buttons for next & react apps.'}
+/>
+```
 
 ### Linkedin Share
 
@@ -179,9 +262,9 @@ import { TelegramShare } from 'react-share-lite'
 👨‍💻 <b>Example</b>
 
 ```js
-import { FacebookMessengerShareButton } from 'react-share-lite'
+import { FacebookMessengerShare } from 'react-share-lite'
 
-<FacebookMessengerShareButton
+<FacebookMessengerShare
   url="https://github.com/ayda-tech/react-share-lite"
   redirectUri="https://github.com/ayda-tech/react-share-lite"
   appId={'dmm4kj9djk203k4liuf994p'}
@@ -201,25 +284,22 @@ import { FacebookMessengerShareButton } from 'react-share-lite'
 👨‍💻 <b>Example</b>
 
 ```js
-import { EmailShare } from 'next-share'
+import { EmailShare } from 'react-share-lite'
 
 <EmailShare
-  url={'https://github.com/next-share'}
-  subject={'Next Share'}
+  url={'https://github.com/ayda-tech/react-share-lite'}
+  subject={'React Share Lite'}
   body="body"
 />
 ```
 
 📕 <b>Props</b>: Supports only on Email
 
-| Props       | Type    | Default | Description                                      | Required |
-| :---------- | :------ | :------ | :----------------------------------------------- | :------- |
-| children    | node    |         | React component, HTML element or string.         | TRUE     |
-| url         | string  |         | The URL of the shared page.                      | TRUE     |
-| subject     | string  |         | The subject of the email.                        | FALSE    |
-| body        | string  |         | The body of the email.                           | FALSE    |
-| separator   | string  |         | A separator to be shared.                        | FALSE    |
-| blankTarget | boolean | false   | Open share window in a new tab if set to `true`. | FALSE    |
+| Props     | Type   | Default | Description                                        | Required |
+| :-------- | :----- | :------ | :------------------------------------------------- | :------- |
+| subject   | string |         | The subject of the email.                          | FALSE    |
+| body      | string |         | The body of the email.                             | FALSE    |
+| separator | string |         | A separator between the email body and the URL.    | FALSE    |
 
 ### VK Share
 
@@ -332,7 +412,7 @@ import { WeiboShare } from 'react-share-lite'
 <WeiboShare
   url={'https://github.com/ayda-tech/react-share-lite'}
   title={'react-share-lite - social share buttons for next & react apps.'}
-  image={`${String(window.location)}/${example - image}`}
+  image={'https://github.com/ayda-tech/react-share-lite/blob/main/react-share-lite.png?raw=true'}
 />
 ```
 
@@ -375,38 +455,6 @@ import { LiveJournalShare } from 'react-share-lite'
 | :---------- | :----- | :------ | :------------------------------ | :------- |
 | description | string |         | Description of the shared page. | FALSE    |
 
-### Workplace Share
-
-👨‍💻 <b>Example</b>
-
-```js
-import { WorkplaceShare } from 'react-share-lite'
-
-<WorkplaceShare
-  url={'https://github.com/ayda-tech/react-share-lite'}
-  quote={'React Share Lite'}
-/>
-```
-
-📕 <b>Props</b>: Supports only on Workspace
-
-| Props   | Type   | Default | Description | Required |
-| :------ | :----- | :------ | :---------- | :------- |
-| quote   | string |         | A quote to be shared. | FALSE    |
-| hashtag | string |         | Hashtags to be shared.   | FALSE    |
-
-### Pocket Share
-
-👨‍💻 <b>Example</b>
-
-```js
-import {
-  PocketShare
-} from 'react-share-lite'
-
-<PocketShare url={'https://github.com/ayda-tech/react-share-lite' />
-```
-
 ### Instapaper Share
 
 👨‍💻 <b>Example</b>
@@ -428,11 +476,9 @@ import { InstapaperShare } from 'react-share-lite'
 👨‍💻 <b>Example</b>
 
 ```js
-import {
-  HatenaShare
-} from 'react-share-lite'
+import { HatenaShare } from 'react-share-lite'
 
-<HatenaShare url={'https://github.com/ayda-tech/react-share-lite' />
+<HatenaShare url={'https://github.com/ayda-tech/react-share-lite'} />
 ```
 
 ### Gab Share
@@ -444,6 +490,12 @@ import { GabShare } from 'react-share-lite'
 
 <GabShare url={'https://github.com/ayda-tech/react-share-lite'} />
 ```
+
+## FAQ
+
+<b>Why doesn't my shared link show an image preview?</b>
+
+Link previews (image, title, description) are generated by the social network from the Open Graph / Twitter Card meta tags of the <b>shared page</b> itself — not by this library. If a preview is missing or wrong, add the proper `og:*` / `twitter:*` meta tags to the page you are sharing.
 
 ## License
 
